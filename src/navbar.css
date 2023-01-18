@@ -1,0 +1,33 @@
+.search_bar{
+margin: 0 auto;
+height: 80px;
+background-color: blueviolet;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.logo h1{
+    font-size: 40px;
+    font-weight: 300;
+    color: white
+}
+.logo span{
+    color: red;
+}
+.find input{
+width: 160px;
+height: 20px;
+border-radius: 25px;
+}
+.find button{
+    width: 60px;
+    height: 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(255, 0, 170);
+    color: white;
+    transition: 0.5s ease;
+}
+.find button:hover{
+    scale: 1.2;
+}

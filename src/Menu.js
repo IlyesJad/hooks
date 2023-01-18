@@ -1,20 +1,28 @@
+import { Rating } from "@mui/material";
 import React from "react";
-import  './Menu.css';
+import './Menu.css';
 
-const Menu = ({ items }) => {
+const Menu = ({ items, query ,setFilterRating, filterRating}) => {
   return (
     <div className="movieCart">
-      {items.map((item) => {
-        const {  title, description, posterURL, rating } = item;
-        return (
-          <article >
-              <h1>{title}</h1>
-              <img className="filmimg" src={posterURL} alt={title} style={{width:300}} />
-              <p>{description}</p>
-              <h1>{rating}</h1>
-          </article>
-        );
-      })}
+      {items.filter((movie) => (
+        movie.title.toLowerCase().trim().includes(query.toLowerCase().trim()) &&  movie.rating >= filterRating
+        )) 
+        .map((item) => {
+          const { title, description, posterURL, rating } = item;
+          return (
+            <article>
+              <h1 className="titre">{title}</h1>
+              <img className="filmimg" src={posterURL} alt={title} />
+              <p className="description" >{description}</p>
+              <Rating
+                name="read-only"
+                value={rating}
+                readOnly
+              />
+            </article>
+          );
+        })}
     </div>
   );
 };

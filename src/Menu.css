@@ -1,16 +1,42 @@
-*{
-    margin: 0 auto;
-    padding: 0;
-    
-}
-.movieCart {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 25% 25% 25%;
-    gap: 20px;
 
+.movieCart {
+    width: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 40px;
+    background-image: url(../src/images/1.jpg);
+    background-size: contain;
 }
 article{
     border: 1px solid black;
     border-radius: 5px;
+    background-color: brown;
+    transition: all 0.7s ease;
+}
+article:hover{
+    scale: 1.1;
+}
+
+.titre{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+.filmimg{
+    border: 1px solid black;
+    width: 380px;
+    height: 500px;
+    text-align: center;
+}
+.description{
+color: white;
+font-size: 17px;
+}
+
+.rating{
+    font-size: 40px;
+    color: red;
 }
